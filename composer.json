@@ -1,0 +1,21 @@
+{
+  "name": "domanage/hebrewdates",
+  "description": "A library to work with hebrew dates.",
+  "keywords": ["hebrew","jewish","date"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kfir Ben-Ami",
+      "email": "kfirba2@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^5.4",
+    "nesbot/carbon": "^1.21"
+  },
+  "autoload": {
+    "psr-4": {
+      "Domanage\\": "src/"
+    }
+  }
+}
