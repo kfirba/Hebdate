@@ -17,6 +17,13 @@ class HebrewDate
 {
 
     /**
+     * The default numeric format.
+     * 
+     * @var string
+     */
+    const NUMERIC = 'Numeric';
+
+    /**
      * Format for english month date.
      *
      * @var string
