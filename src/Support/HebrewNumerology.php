@@ -55,7 +55,7 @@ class HebrewNumerology
     {
         $this->validateHebrewCharactersOnly($word);
 
-        $letters = $this->utf8_str_split($word);
+        $letters = utf8_str_split($word);
 
         $letters[0] = ($letters[0] == 'ה' && $hebrewYear) ? 5000 : $letters[0];
 
@@ -74,18 +74,6 @@ class HebrewNumerology
         if ( ! preg_match('/[א-ת]/', $word)) {
             throw new \InvalidArgumentException('The string must be in hebrew with no spaces');
         }
-    }
-
-    /**
-     * Split the hebrew characters into an array.
-     *
-     * @param string $str
-     * @param int    $len
-     * @return array
-     */
-    protected function utf8_str_split($str = '', $len = 0)
-    {
-        return preg_split('/(?<=\G.{' . $len . '})/u', $str, - 1, PREG_SPLIT_NO_EMPTY);
     }
 
     /**

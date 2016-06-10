@@ -18,7 +18,7 @@ class HebrewDate
 
     /**
      * The default numeric format.
-     * 
+     *
      * @var string
      */
     const NUMERIC = 'Numeric';
@@ -36,6 +36,13 @@ class HebrewDate
      * @var string
      */
     const HEBREW_FULL = 'HebrewFull';
+
+    /**
+     * Format for presentation hebrew date.
+     *
+     * @var string
+     */
+    const PRESENTABLE_HEBREW_DATE = 'PresentableHebrewDate';
 
     /**
      * Parsed gregorian date input in mm/dd/yyyy format.

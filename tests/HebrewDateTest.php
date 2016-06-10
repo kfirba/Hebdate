@@ -26,8 +26,11 @@ class HebrewDateTest extends PHPUnit_Framework_TestCase
     {
         $englishMonth = HebrewDate::fromGregorian('05/06/2016')->format(HebrewDate::ENGLISH_MONTH)->parse();
         $hebrew = HebrewDate::fromGregorian(Carbon::createFromDate(2016, 6, 5))->format(HebrewDate::HEBREW_FULL)->parse();
+        $hebrewDate = HebrewDate::fromGregorian('05/06/2016')->format(HebrewDate::PRESENTABLE_HEBREW_DATE)->parse();
+
 
         $this->assertEquals($englishMonth, '28 Iyar 5776');
         $this->assertEquals($hebrew, 'כח אייר התשעו');
+        $this->assertEquals($hebrewDate, "כח׳ אייר התשע״ו");
     }
 }
