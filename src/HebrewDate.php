@@ -69,35 +69,14 @@ class HebrewDate
     }
 
     /**
-     * Create a new HebrewDate instance with parsed date.
+     * Create a new HebrewDate instance with given gregorian date.
      *
      * @param $date
      * @return static
      */
     public static function fromGregorian($date)
     {
-        $parser = static::getParser($date);
-
-        return new static($parser->handle());
-    }
-
-    /**
-     * Get the right parser for the given input.
-     *
-     * @param $date
-     * @return CarbonParser|DateTimeParser|StringParser
-     */
-    protected static function getParser($date)
-    {
-        if ($date instanceof Carbon) {
-            return new CarbonParser($date);
-        }
-
-        if ($date instanceof DateTime) {
-            return new DateTimeParser($date);
-        }
-
-        return new StringParser($date);
+        return new static($date);
     }
 
     /**
@@ -121,14 +100,44 @@ class HebrewDate
      */
     public function parse($delimiter = " ")
     {
-        list($gregorianDay, $gregorianMonth, $gregorianYear) = $this->gregorianDate;
-        $julianDate = gregoriantojd($gregorianDay, $gregorianMonth, $gregorianYear);
+        $julianDate = $this->toJulianDate();
 
-        $jewishDate = jdtojewish($julianDate);
-
-        $jewishDate = $this->applyFormat(explode('/', $jewishDate));
+        $jewishDate = $this->applyFormat(
+            explode('/', jdtojewish($julianDate))
+        );
 
         return implode($delimiter, $jewishDate);
+    }
+
+    /**
+     * Get the julian date representation for the current date.
+     *
+     * @return int
+     */
+    protected function toJulianDate()
+    {
+        $gregorianDate = $this->getParser()->handle();
+        list($gregorianDay, $gregorianMonth, $gregorianYear) = $gregorianDate;
+
+        return gregoriantojd($gregorianDay, $gregorianMonth, $gregorianYear);
+    }
+
+    /**
+     * Get the right parser for the date.
+     *
+     * @return CarbonParser|DateTimeParser|StringParser
+     */
+    protected function getParser()
+    {
+        if ($this->gregorianDate instanceof Carbon) {
+            return new CarbonParser($this->gregorianDate);
+        }
+
+        if ($this->gregorianDate instanceof DateTime) {
+            return new DateTimeParser($this->gregorianDate);
+        }
+
+        return new StringParser($this->gregorianDate);
     }
 
     /**
