@@ -6,19 +6,15 @@ use Domanage\HebrewDate;
 class HebrewDateTest extends PHPUnit_Framework_TestCase
 {
     /** @test */
-    public function a_gregorian_date_should_be_converted_to_hebrew_date()
+    public function it_should_accept_carbon_and_datetime_objects_as_well_as_strings_as_parameter()
     {
-        $this->assertEquals(HebrewDate::fromGregorian('05/06/2016')->parse(), '28 9 5776');
-    }
-
-    /** @test */
-    public function it_should_accept_carbon_and_datetime_objects_as_parameter()
-    {
-        $carbon = Carbon::createFromDate(2016, 6, 5);
+        $string = '05/06/2016';
         $dateTime = new DateTime('2016-06-05');
+        $carbon = Carbon::createFromDate(2016, 6, 5);
 
-        $this->assertEquals(HebrewDate::fromGregorian($carbon)->parse(), '28 9 5776');
+        $this->assertEquals(HebrewDate::fromGregorian($string)->parse(), '28 9 5776');
         $this->assertEquals(HebrewDate::fromGregorian($dateTime)->parse(), '28 9 5776');
+        $this->assertEquals(HebrewDate::fromGregorian($carbon)->parse(), '28 9 5776');
     }
 
     /** @test */
