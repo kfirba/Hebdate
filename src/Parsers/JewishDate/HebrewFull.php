@@ -2,7 +2,6 @@
 
 namespace Domanage\Parsers\JewishDate;
 
-use Domanage\HebrewDate;
 use Domanage\Parsers\Parser;
 use Domanage\Support\HebrewNumerology;
 

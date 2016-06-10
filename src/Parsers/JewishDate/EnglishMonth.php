@@ -2,7 +2,6 @@
 
 namespace Domanage\Parsers\JewishDate;
 
-use Domanage\HebrewDate;
 use Domanage\Parsers\Parser;
 
 /**
@@ -42,7 +41,7 @@ class EnglishMonth extends Parser
     public function handle()
     {
         $month = self::EnglishLookup[$this->date[0]];
-        
+
         // if we got Adar/Adar II, we need to determine whether it's a leap year or not
         if (is_array($month)) {
             $month = isJewishLeapYear($this->date[2]) ? $month[1] : $month[0];
