@@ -45,9 +45,9 @@ class HebrewDate
     const PRESENTABLE_HEBREW_DATE = 'PresentableHebrewDate';
 
     /**
-     * Parsed gregorian date input in mm/dd/yyyy format.
+     * Gregorian date input.
      *
-     * @var array
+     * @var string|Carbon|\DateTime
      */
     protected $gregorianDate;
 
