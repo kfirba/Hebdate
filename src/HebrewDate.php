@@ -145,18 +145,6 @@ class HebrewDate
     }
 
     /**
-     * Check whether the given year is a leap year or not.
-     *
-     * @param $year
-     * @return bool
-     */
-    public static function isLeapYear($year)
-    {
-        return ($year % 19 == 0 || $year % 19 == 3 || $year % 19 == 6 || $year % 19 == 8 ||
-            $year % 19 == 11 || $year % 19 == 14 || $year % 19 == 17);
-    }
-
-    /**
      * Convert the HebrewDate object into its string representation.
      *
      * @return string

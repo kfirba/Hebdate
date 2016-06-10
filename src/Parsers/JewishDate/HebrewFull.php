@@ -103,7 +103,7 @@ class HebrewFull extends Parser
         $month = self::monthLookup[$this->date[0]];
 
         if (is_array($month)) {
-            $month = HebrewDate::isLeapYear($this->date[2]) ? $month[1] : $month[0];
+            $month = isJewishLeapYear($this->date[2]) ? $month[1] : $month[0];
         }
 
         $year = $this->numerology->toHebrewYear($this->date[2]);
