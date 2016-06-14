@@ -13,9 +13,8 @@ use Domanage\Parsers\GregorianDate\DateTimeParser;
  *
  * @package Domanage
  */
-class GregorianDate
+class GregorianDate extends Date
 {
-
     /**
      * The default numeric format.
      *
@@ -45,31 +44,6 @@ class GregorianDate
     const PRESENTABLE_HEBREW_DATE = 'PresentableHebrewDate';
 
     /**
-     * Input date.
-     *
-     * @var string|Carbon|\DateTime
-     */
-    protected $date;
-
-    /**
-     * The default format for output.
-     *
-     * @var string
-     */
-    protected $format = 'Numeric';
-
-
-    /**
-     * GregorianDate constructor.
-     *
-     * @param $date
-     */
-    protected function __construct($date)
-    {
-        $this->date = $date;
-    }
-
-    /**
      * Named constructor.
      *
      * @param $date
@@ -81,20 +55,7 @@ class GregorianDate
     }
 
     /**
-     * Set the format.
-     *
-     * @param $format
-     * @return $this
-     */
-    public function format($format)
-    {
-        $this->format = $format;
-
-        return $this;
-    }
-
-    /**
-     * Parse the GregorianDate object and return a result based on format.
+     * Parse the Date object and return a result based on format.
      *
      * @param string $delimiter
      * @return string
@@ -152,15 +113,5 @@ class GregorianDate
         $class = "Domanage\\Formats\\JewishDate\\{$this->format}";
 
         return (new $class($jewishDate))->handle();
-    }
-
-    /**
-     * Convert the HebrewDate object into its string representation.
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->parse();
     }
 }
