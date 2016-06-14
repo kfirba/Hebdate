@@ -91,6 +91,7 @@ class HebrewStringParser extends Parser
         $this->date = $date;
         $this->numerology = new HebrewNumerology;
     }
+
     /**
      * Handle the parse request.
      *
@@ -110,7 +111,7 @@ class HebrewStringParser extends Parser
     protected function sanitizeDate()
     {
         $this->date = array_map(function ($segment) {
-            return preg_replace('[״"׳\']', '', $segment);
+            return preg_replace('[״|"|׳|\']', '', $segment);
         }, explode(' ', $this->date));
 
         return $this;

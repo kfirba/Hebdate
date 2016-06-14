@@ -13,8 +13,8 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
         $presentableHebrewDate = "כח׳ אייר התשע״ו";
 
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($numericDate)->parse());
-//        $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->parse());
-//        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->parse());
-//        $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->parse());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->parse());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->parse());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->parse());
     }
 }

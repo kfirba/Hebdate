@@ -4,7 +4,13 @@ namespace Domanage;
 
 use Domanage\Parsers\JewishDate\DefaultParser;
 use Domanage\Parsers\JewishDate\HebrewStringParser;
+use Domanage\Parsers\JewishDate\EnglishMonthParser;
 
+/**
+ * Class JewishDate
+ *
+ * @package Domanage
+ */
 class JewishDate extends Date
 {
     /**
@@ -48,6 +54,11 @@ class JewishDate extends Date
         return jewishtojd($month, $day, $year);
     }
 
+    /**
+     * Get the appropriate parser for the date.
+     *
+     * @return DefaultParser|EnglishMonthParser|HebrewStringParser
+     */
     public function getParser()
     {
         if (preg_match('/[א-ת]/', $this->date)) {
@@ -61,6 +72,12 @@ class JewishDate extends Date
         return new DefaultParser($this->date);
     }
 
+    /**
+     * Apply a format.
+     *
+     * @param array $gregorianDate
+     * @return mixed
+     */
     protected function applyFormat(array $gregorianDate)
     {
         $class = "Domanage\\Formats\\GregorianDate\\{$this->format}";
