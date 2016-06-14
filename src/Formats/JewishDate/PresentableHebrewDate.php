@@ -1,6 +1,6 @@
 <?php
 
-namespace Domanage\Parsers\JewishDate;
+namespace Domanage\Formats\JewishDate;
 
 use Domanage\Parsers\Parser;
 
