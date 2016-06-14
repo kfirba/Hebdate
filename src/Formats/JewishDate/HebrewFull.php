@@ -2,7 +2,7 @@
 
 namespace Domanage\Formats\JewishDate;
 
-use Domanage\Parsers\Parser;
+use Domanage\Formats\Format;
 use Domanage\Support\HebrewNumerology;
 
 /**
@@ -10,7 +10,7 @@ use Domanage\Support\HebrewNumerology;
  *
  * @package Domanage\Parsers\JewishDate
  */
-class HebrewFull extends Parser
+class HebrewFull extends Format
 {
     /**
      * Lookup table for hebrew days.
@@ -96,7 +96,7 @@ class HebrewFull extends Parser
      *
      * @return array
      */
-    public function handle()
+    public function format()
     {
         $day = self::dayLookup[$this->date[1]];
         $month = self::monthLookup[$this->date[0]];

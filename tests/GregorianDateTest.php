@@ -1,7 +1,6 @@
 <?php
 
 use Carbon\Carbon;
-use Domanage\HebrewDate;
 use Domanage\GregorianDate;
 
 class GregorianDateTest extends PHPUnit_Framework_TestCase

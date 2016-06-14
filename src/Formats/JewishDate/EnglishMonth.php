@@ -2,14 +2,14 @@
 
 namespace Domanage\Formats\JewishDate;
 
-use Domanage\Parsers\Parser;
+use Domanage\Formats\Format;
 
 /**
  * Class EnglishMonth
  *
  * @package Domanage\Parsers\JewishDate
  */
-class EnglishMonth extends Parser
+class EnglishMonth extends Format
 {
     /**
      * Lookup table for hebrew months in english.
@@ -38,7 +38,7 @@ class EnglishMonth extends Parser
      *
      * @return array
      */
-    public function handle()
+    public function format()
     {
         $month = self::EnglishLookup[$this->date[0]];
 

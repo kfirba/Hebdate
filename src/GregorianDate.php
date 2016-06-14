@@ -112,6 +112,6 @@ class GregorianDate extends Date
     {
         $class = "Domanage\\Formats\\JewishDate\\{$this->format}";
 
-        return (new $class($jewishDate))->handle();
+        return (new $class($jewishDate))->format();
     }
 }

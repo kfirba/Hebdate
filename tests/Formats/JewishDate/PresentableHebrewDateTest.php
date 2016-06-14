@@ -9,6 +9,6 @@ class PresentableHebrewDateTest extends PHPUnit_Framework_TestCase
     {
         $presentableHebrew = new PresentableHebrewDate([9, 28, 5776]);
 
-        $this->assertEquals(['כח׳', 'אייר', 'התשע״ו'], $presentableHebrew->handle());
+        $this->assertEquals(['כח׳', 'אייר', 'התשע״ו'], $presentableHebrew->format());
     }
 }

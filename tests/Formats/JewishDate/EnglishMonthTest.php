@@ -9,7 +9,7 @@ class EnglishMonthTest extends PHPUnit_Framework_TestCase
     {
         $englishMonth = new EnglishMonth([9, 28, 5776]);
 
-        $this->assertEquals([28, 'Iyar', 5776], $englishMonth->handle());
+        $this->assertEquals([28, 'Iyar', 5776], $englishMonth->format());
     }
 
     /** @test */
@@ -18,6 +18,6 @@ class EnglishMonthTest extends PHPUnit_Framework_TestCase
         // 10 Adar II, 5776
         $englishMonth = new EnglishMonth([7, 10, 5776]);
 
-        $this->assertEquals([10, 'Adar II', 5776], $englishMonth->handle());
+        $this->assertEquals([10, 'Adar II', 5776], $englishMonth->format());
     }
 }

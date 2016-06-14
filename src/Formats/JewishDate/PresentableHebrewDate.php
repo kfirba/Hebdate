@@ -2,25 +2,25 @@
 
 namespace Domanage\Formats\JewishDate;
 
-use Domanage\Parsers\Parser;
+use Domanage\Formats\Format;
 
 /**
  * Class PresentableHebrewDate
  *
  * @package Domanage\Parsers\JewishDate
  */
-class PresentableHebrewDate extends Parser
+class PresentableHebrewDate extends Format
 {
     /**
      * Handle the parse request.
      *
      * @return mixed
      */
-    public function handle()
+    public function format()
     {
         // we will use the already existing HebrewFull parser
         // to give is a good head start with this compilation
-        $hebrewDate = (new HebrewFull($this->date))->handle();
+        $hebrewDate = (new HebrewFull($this->date))->format();
 
         $day = $hebrewDate[0]."׳";
         $month = $this->decorateMonth($hebrewDate[1]);

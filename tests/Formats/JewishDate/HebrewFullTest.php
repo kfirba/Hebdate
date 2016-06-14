@@ -9,7 +9,7 @@ class HebrewFullTest extends PHPUnit_Framework_TestCase
     {
         $hebrew = new HebrewFull([9, 28, 5776]);
 
-        $this->assertEquals(['כח', 'אייר', 'התשעו'], $hebrew->handle());
+        $this->assertEquals(['כח', 'אייר', 'התשעו'], $hebrew->format());
     }
 
     /** @test */
@@ -18,6 +18,6 @@ class HebrewFullTest extends PHPUnit_Framework_TestCase
         // 10 Adar II, 5776
         $hebrew = new HebrewFull([7, 10, 5776]);
 
-        $this->assertEquals(['י', 'אדר ב', 'התשעו'], $hebrew->handle());
+        $this->assertEquals(['י', 'אדר ב', 'התשעו'], $hebrew->format());
     }
 }
