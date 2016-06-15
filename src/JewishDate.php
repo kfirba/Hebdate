@@ -14,6 +14,27 @@ use Domanage\Parsers\JewishDate\EnglishMonthParser;
 class JewishDate extends Date
 {
     /**
+     * The default numeric format.
+     *
+     * @var string
+     */
+    const NUMERIC = 'Numeric';
+
+    /**
+     * Carbon object format.
+     *
+     * @var string
+     */
+    const CARBON = 'Carbon';
+
+    /**
+     * DateTime object format.
+     *
+     * @var string
+     */
+    const DATETIME = 'DateTime';
+
+    /**
      * Named constructor.
      *
      * @param $date
@@ -49,7 +70,7 @@ class JewishDate extends Date
             explode('/', jdtogregorian($julianDate))
         );
 
-        return implode($delimiter, $gregorianDate);
+        return is_array($gregorianDate) ? implode($delimiter, $gregorianDate) : $gregorianDate;
     }
 
     /**
