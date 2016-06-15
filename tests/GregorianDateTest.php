@@ -1,10 +1,17 @@
 <?php
 
 use Carbon\Carbon;
+use Domanage\JewishDate;
 use Domanage\GregorianDate;
 
 class GregorianDateTest extends PHPUnit_Framework_TestCase
 {
+    /** @test */
+    public function it_returns_JewishDate_object_using_named_constructor()
+    {
+        $this->assertInstanceOf(JewishDate::class, GregorianDate::fromJewish('28 9 5776'));
+    }
+
     /** @test */
     public function it_should_accept_carbon_and_datetime_objects_as_well_as_strings_as_parameter()
     {

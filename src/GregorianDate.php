@@ -55,6 +55,17 @@ class GregorianDate extends Date
     }
 
     /**
+     * Instantiate a JewishDate object.
+     *
+     * @param $date
+     * @return JewishDate
+     */
+    public static function fromJewish($date)
+    {
+        return new JewishDate($date);
+    }
+
+    /**
      * Parse the Date object and return a result based on format.
      *
      * @param string $delimiter
