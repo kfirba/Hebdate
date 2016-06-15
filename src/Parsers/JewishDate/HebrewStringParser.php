@@ -99,8 +99,7 @@ class HebrewStringParser extends Parser
      */
     public function handle()
     {
-        return $this->sanitizeDate()
-            ->swap();
+        return $this->sanitize()->swap();
     }
 
     /**
@@ -108,7 +107,7 @@ class HebrewStringParser extends Parser
      *
      * @return $this
      */
-    protected function sanitizeDate()
+    protected function sanitize()
     {
         $this->date = array_map(function ($segment) {
             return preg_replace('[״|"|׳|\']', '', $segment);
