@@ -71,7 +71,7 @@ class GregorianDate extends Date
      * @param string $delimiter
      * @return string
      */
-    public function parse($delimiter = " ")
+    public function convert($delimiter = " ")
     {
         $julianDate = $this->toJulianDate();
 
@@ -89,7 +89,7 @@ class GregorianDate extends Date
      */
     protected function toJulianDate()
     {
-        $gregorianDate = $this->getParser()->handle();
+        $gregorianDate = $this->getParser()->parse();
         list($gregorianDay, $gregorianMonth, $gregorianYear) = $gregorianDate;
 
         return gregoriantojd($gregorianDay, $gregorianMonth, $gregorianYear);

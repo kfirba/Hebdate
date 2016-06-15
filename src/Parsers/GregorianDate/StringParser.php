@@ -13,11 +13,11 @@ use InvalidArgumentException;
 class StringParser extends Parser
 {
     /**
-     * Handle the parse request.
+     * Parse the request.
      *
      * @return array
      */
-    public function handle()
+    public function parse()
     {
         $this->validate();
 

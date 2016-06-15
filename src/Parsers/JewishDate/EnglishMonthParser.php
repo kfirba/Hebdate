@@ -35,11 +35,11 @@ class EnglishMonthParser extends Parser
     ];
 
     /**
-     * Handle the parse request.
+     * Parse the request.
      *
      * @return mixed
      */
-    public function handle()
+    public function parse()
     {
         $this->date = explode(' ', $this->date);
 

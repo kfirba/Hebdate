@@ -20,21 +20,21 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
         $hebrewFull = 'כח אייר התשעו';
         $presentableHebrewDate = "כח׳ אייר התשע״ו";
 
-        $this->assertEquals('05/06/2016', JewishDate::toGregorian($numericDate)->parse());
-        $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->parse());
-        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->parse());
-        $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->parse());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($numericDate)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->convert());
     }
 
     /** @test */
     public function it_accepts_multiple_formats()
     {
         $this->assertInstanceOf(Carbon::class,
-            JewishDate::toGregorian('28 9 5776')->format(JewishDate::CARBON)->parse()
+            JewishDate::toGregorian('28 9 5776')->format(JewishDate::CARBON)->convert()
         );
 
         $this->assertInstanceOf(DateTime::class,
-            JewishDate::toGregorian('28 9 5776')->format(JewishDate::DATETIME)->parse()
+            JewishDate::toGregorian('28 9 5776')->format(JewishDate::DATETIME)->convert()
         );
     }
 }

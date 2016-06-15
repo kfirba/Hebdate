@@ -35,7 +35,7 @@ abstract class Date
      * @param string $delimiter
      * @return string
      */
-    abstract public function parse($delimiter = " ");
+    abstract public function convert($delimiter = " ");
 
     /**
      * Set the format.

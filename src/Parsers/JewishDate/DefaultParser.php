@@ -7,11 +7,11 @@ use Domanage\Parsers\Parser;
 class DefaultParser extends Parser
 {
     /**
-     * Handle the parse request.
+     * Parse the request.
      *
      * @return mixed
      */
-    public function handle()
+    public function parse()
     {
         return explode(' ', $this->date);
     }

@@ -1,6 +1,5 @@
 <?php
 
-
 use Carbon\Carbon;
 use Domanage\Parsers\GregorianDate\CarbonParser;
 
@@ -11,6 +10,6 @@ class CarbonParserTest extends PHPUnit_Framework_TestCase
     {
         $parser = new CarbonParser(Carbon::create(2016, 6, 5));
 
-        $this->assertEquals([06, 05, 2016], $parser->handle());
+        $this->assertEquals([06, 05, 2016], $parser->parse());
     }
 }

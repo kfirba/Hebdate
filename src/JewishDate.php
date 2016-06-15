@@ -62,7 +62,7 @@ class JewishDate extends Date
      * @param string $delimiter
      * @return string
      */
-    public function parse($delimiter = '/')
+    public function convert($delimiter = '/')
     {
         $julianDate = $this->toJulianDate();
 
@@ -80,7 +80,7 @@ class JewishDate extends Date
      */
     protected function toJulianDate()
     {
-        $numericDate = $this->getParser()->handle();
+        $numericDate = $this->getParser()->parse();
         list($day, $month, $year) = $numericDate;
 
         return jewishtojd($month, $day, $year);

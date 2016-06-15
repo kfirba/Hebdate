@@ -12,11 +12,11 @@ use Domanage\Parsers\Parser;
 class DateTimeParser extends Parser
 {
     /**
-     * Handle the parse request.
+     * Parse the request.
      *
      * @return array
      */
-    public function handle()
+    public function parse()
     {
         $date = explode('-', $this->date->format('Y-m-d'));
 

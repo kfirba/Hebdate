@@ -27,9 +27,9 @@ abstract class Parser
     }
 
     /**
-     * Handle the parse request.
+     * Parse the date.
      *
      * @return mixed
      */
-    public abstract function handle();
+    public abstract function parse();
 }
