@@ -1,5 +1,5 @@
 {
-  "name": "Domanage/Hebdate",
+  "name": "kfirba/hebdate",
   "description": "A library to convert jewish dates to gregorian dates and vice versa",
   "keywords": [
     "hebrew",
@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Domanage\\": "src/"
+      "Kfirba\\": "src/"
     },
     "files": [
       "src/Support/helpers.php"

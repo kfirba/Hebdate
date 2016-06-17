@@ -1,8 +1,8 @@
 <?php
 
 use Carbon\Carbon;
-use Domanage\JewishDate;
-use Domanage\GregorianDate;
+use Kfirba\JewishDate;
+use Kfirba\GregorianDate;
 
 class GregorianDateTest extends PHPUnit_Framework_TestCase
 {

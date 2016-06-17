@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Support\HebrewNumerology;
+use Kfirba\Support\HebrewNumerology;
 
 class HebrewNumerologyTest extends PHPUnit_Framework_TestCase
 {

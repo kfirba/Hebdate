@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\GregorianDate\DateTime;
+use Kfirba\Formats\GregorianDate\DateTime;
 
 class DateTimeTest extends PHPUnit_Framework_TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Domanage\Parsers\GregorianDate\CarbonParser;
+use Kfirba\Parsers\GregorianDate\CarbonParser;
 
 class CarbonParserTest extends PHPUnit_Framework_TestCase
 {

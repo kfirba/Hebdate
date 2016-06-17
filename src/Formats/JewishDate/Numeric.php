@@ -1,13 +1,13 @@
 <?php
 
-namespace Domanage\Formats\JewishDate;
+namespace Kfirba\Formats\JewishDate;
 
-use Domanage\Formats\Format;
+use Kfirba\Formats\Format;
 
 /**
  * Class Numeric
  *
- * @package Domanage\Parsers\JewishDate
+ * @package Kfirba\Parsers\JewishDate
  */
 class Numeric extends Format
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Domanage\Formats;
+namespace Kfirba\Formats;
 
 abstract class Format
 {

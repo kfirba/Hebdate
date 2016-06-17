@@ -1,13 +1,13 @@
 <?php
 
-namespace Domanage\Parsers\JewishDate;
+namespace Kfirba\Parsers\JewishDate;
 
-use Domanage\Parsers\Parser;
+use Kfirba\Parsers\Parser;
 
 /**
  * Class EnglishMonthParser
  *
- * @package Domanage\Parsers\JewishDate
+ * @package Kfirba\Parsers\JewishDate
  */
 class EnglishMonthParser extends Parser
 {

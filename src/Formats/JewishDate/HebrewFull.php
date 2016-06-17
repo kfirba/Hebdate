@@ -1,14 +1,14 @@
 <?php
 
-namespace Domanage\Formats\JewishDate;
+namespace Kfirba\Formats\JewishDate;
 
-use Domanage\Formats\Format;
-use Domanage\Support\HebrewNumerology;
+use Kfirba\Formats\Format;
+use Kfirba\Support\HebrewNumerology;
 
 /**
  * Class HebrewFull
  *
- * @package Domanage\Parsers\JewishDate
+ * @package Kfirba\Parsers\JewishDate
  */
 class HebrewFull extends Format
 {

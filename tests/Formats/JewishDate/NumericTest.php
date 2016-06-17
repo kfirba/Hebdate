@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\JewishDate\Numeric;
+use Kfirba\Formats\JewishDate\Numeric;
 
 class NumericTest extends PHPUnit_Framework_TestCase
 {

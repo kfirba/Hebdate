@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\GregorianDate\Carbon;
+use Kfirba\Formats\GregorianDate\Carbon;
 
 class CarbonTest extends PHPUnit_Framework_TestCase
 {

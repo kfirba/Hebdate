@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\JewishDate\HebrewFull;
+use Kfirba\Formats\JewishDate\HebrewFull;
 
 class HebrewFullTest extends PHPUnit_Framework_TestCase
 {

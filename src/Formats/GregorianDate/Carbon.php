@@ -1,9 +1,9 @@
 <?php
 
-namespace Domanage\Formats\GregorianDate;
+namespace Kfirba\Formats\GregorianDate;
 
 use Carbon\Carbon as CarbonDate;
-use Domanage\Formats\Format;
+use Kfirba\Formats\Format;
 
 class Carbon extends Format
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Domanage\Parsers\JewishDate;
+namespace Kfirba\Parsers\JewishDate;
 
-use Domanage\Parsers\Parser;
+use Kfirba\Parsers\Parser;
 
 class DefaultParser extends Parser
 {

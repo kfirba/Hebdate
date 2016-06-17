@@ -1,11 +1,11 @@
 <?php
 
-namespace Domanage\Parsers;
+namespace Kfirba\Parsers;
 
 /**
  * Class Parser
  *
- * @package Domanage\Parsers
+ * @package Kfirba\Parsers
  */
 abstract class Parser
 {

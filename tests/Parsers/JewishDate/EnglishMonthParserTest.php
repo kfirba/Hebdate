@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Parsers\JewishDate\EnglishMonthParser;
+use Kfirba\Parsers\JewishDate\EnglishMonthParser;
 
 class EnglishMonthParserTest extends PHPUnit_Framework_TestCase
 {

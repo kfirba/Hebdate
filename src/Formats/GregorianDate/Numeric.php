@@ -1,8 +1,8 @@
 <?php
 
-namespace Domanage\Formats\GregorianDate;
+namespace Kfirba\Formats\GregorianDate;
 
-use Domanage\Formats\Format;
+use Kfirba\Formats\Format;
 
 class Numeric extends Format
 {

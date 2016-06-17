@@ -1,14 +1,14 @@
 <?php
 
-namespace Domanage\Parsers\JewishDate;
+namespace Kfirba\Parsers\JewishDate;
 
-use Domanage\Parsers\Parser;
-use Domanage\Support\HebrewNumerology;
+use Kfirba\Parsers\Parser;
+use Kfirba\Support\HebrewNumerology;
 
 /**
  * Class HebrewStringParser
  *
- * @package Domanage\Parsers\JewishDate
+ * @package Kfirba\Parsers\JewishDate
  */
 class HebrewStringParser extends Parser
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Domanage\Parsers\GregorianDate;
+namespace Kfirba\Parsers\GregorianDate;
 
-use Domanage\Parsers\Parser;
+use Kfirba\Parsers\Parser;
 
 /**
  * Class CarbonParser
  *
- * @package Domanage\Parsers\GregorianDate
+ * @package Kfirba\Parsers\GregorianDate
  */
 class CarbonParser extends Parser
 {

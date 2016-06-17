@@ -1,8 +1,8 @@
 <?php
 
-namespace Domanage\Formats\GregorianDate;
+namespace Kfirba\Formats\GregorianDate;
 
-use Domanage\Formats\Format;
+use Kfirba\Formats\Format;
 use DateTime as DateTimeDate;
 
 class DateTime extends Format

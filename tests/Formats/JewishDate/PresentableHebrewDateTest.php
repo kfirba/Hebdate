@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\JewishDate\PresentableHebrewDate;
+use Kfirba\Formats\JewishDate\PresentableHebrewDate;
 
 class PresentableHebrewDateTest extends PHPUnit_Framework_TestCase
 {

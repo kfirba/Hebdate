@@ -1,11 +1,11 @@
 <?php
 
-namespace Domanage\Support;
+namespace Kfirba\Support;
 
 /**
  * Class HebrewNumerology
  *
- * @package Domanage\Support
+ * @package Kfirba\Support
  */
 class HebrewNumerology
 {

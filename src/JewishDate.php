@@ -1,15 +1,15 @@
 <?php
 
-namespace Domanage;
+namespace Kfirba;
 
-use Domanage\Parsers\JewishDate\DefaultParser;
-use Domanage\Parsers\JewishDate\HebrewStringParser;
-use Domanage\Parsers\JewishDate\EnglishMonthParser;
+use Kfirba\Parsers\JewishDate\DefaultParser;
+use Kfirba\Parsers\JewishDate\HebrewStringParser;
+use Kfirba\Parsers\JewishDate\EnglishMonthParser;
 
 /**
  * Class JewishDate
  *
- * @package Domanage
+ * @package Kfirba
  */
 class JewishDate extends Date
 {
@@ -112,7 +112,7 @@ class JewishDate extends Date
      */
     protected function applyFormat(array $gregorianDate)
     {
-        $class = "Domanage\\Formats\\GregorianDate\\{$this->format}";
+        $class = "Kfirba\\Formats\\GregorianDate\\{$this->format}";
 
         return (new $class($gregorianDate))->format();
     }

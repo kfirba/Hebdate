@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Parsers\GregorianDate\StringParser;
+use Kfirba\Parsers\GregorianDate\StringParser;
 
 class StringParserTest extends PHPUnit_Framework_TestCase
 {

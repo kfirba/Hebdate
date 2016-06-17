@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\GregorianDate\Numeric;
+use Kfirba\Formats\GregorianDate\Numeric;
 
 class GregorianNumericTest extends PHPUnit_Framework_TestCase
 {

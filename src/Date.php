@@ -1,6 +1,6 @@
 <?php
 
-namespace Domanage;
+namespace Kfirba;
 
 abstract class Date
 {

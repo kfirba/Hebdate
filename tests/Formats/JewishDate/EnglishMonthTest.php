@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Formats\JewishDate\EnglishMonth;
+use Kfirba\Formats\JewishDate\EnglishMonth;
 
 class EnglishMonthTest extends PHPUnit_Framework_TestCase
 {

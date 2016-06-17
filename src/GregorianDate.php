@@ -1,17 +1,17 @@
 <?php
 
-namespace Domanage;
+namespace Kfirba;
 
 use DateTime;
 use Carbon\Carbon;
-use Domanage\Parsers\GregorianDate\CarbonParser;
-use Domanage\Parsers\GregorianDate\StringParser;
-use Domanage\Parsers\GregorianDate\DateTimeParser;
+use Kfirba\Parsers\GregorianDate\CarbonParser;
+use Kfirba\Parsers\GregorianDate\StringParser;
+use Kfirba\Parsers\GregorianDate\DateTimeParser;
 
 /**
  * Class GregorianDate
  *
- * @package Domanage
+ * @package Kfirba
  */
 class GregorianDate extends Date
 {
@@ -121,7 +121,7 @@ class GregorianDate extends Date
      */
     protected function applyFormat(array $jewishDate)
     {
-        $class = "Domanage\\Formats\\JewishDate\\{$this->format}";
+        $class = "Kfirba\\Formats\\JewishDate\\{$this->format}";
 
         return (new $class($jewishDate))->format();
     }

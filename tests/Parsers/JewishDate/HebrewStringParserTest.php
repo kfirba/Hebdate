@@ -1,6 +1,6 @@
 <?php
 
-use Domanage\Parsers\JewishDate\HebrewStringParser;
+use Kfirba\Parsers\JewishDate\HebrewStringParser;
 
 class HebrewStringParserTest extends PHPUnit_Framework_TestCase
 {
