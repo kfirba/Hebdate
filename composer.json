@@ -1,10 +1,13 @@
 {
-  "name": "Domanage/HebrewDates",
+  "name": "Domanage/Hebdate",
   "description": "A library to work with hebrew dates.",
   "keywords": [
     "hebrew",
     "jewish",
-    "date"
+    "date",
+    "convert date",
+    "gregorian to hebrew",
+    "hebrew to gregorian"
   ],
   "license": "MIT",
   "authors": [
