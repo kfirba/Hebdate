@@ -1,7 +1,11 @@
 {
-  "name": "domanage/hebrewdates",
+  "name": "Domanage/HebrewDates",
   "description": "A library to work with hebrew dates.",
-  "keywords": ["hebrew","jewish","date"],
+  "keywords": [
+    "hebrew",
+    "jewish",
+    "date"
+  ],
   "license": "MIT",
   "authors": [
     {
