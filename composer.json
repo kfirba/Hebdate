@@ -1,6 +1,6 @@
 {
   "name": "Domanage/Hebdate",
-  "description": "A library to work with hebrew dates.",
+  "description": "A library to convert jewish dates to gregorian dates and vice versa",
   "keywords": [
     "hebrew",
     "jewish",
@@ -16,6 +16,9 @@
       "email": "kfirba2@gmail.com"
     }
   ],
+  "require": {
+    "php": ">=5.5.0"
+  },
   "require-dev": {
     "phpunit/phpunit": "^5.4",
     "nesbot/carbon": "^1.21"
