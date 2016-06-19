@@ -1,4 +1,4 @@
-# HebrewDates
+# Hebdate
 
 ![Version](https://img.shields.io/packagist/v/kfirba/hebdate.svg)
 ![Downloads](https://img.shields.io/packagist/dt/kfirba/hebdate.svg)
