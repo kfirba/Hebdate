@@ -126,5 +126,14 @@ GregorianDate::fromJewish('28 9 5776')->format(Format::DATETIME)->convert();
 // -> DateTime Object {}
 ```
 
+## Extras
+
+The `convert()` method accepts a `$delimiter` argument. When converting to Jewish dates it defaults to a space (" ") and when converting to Gregorian date it defaults to a slash (/).
+
+The library also registers 2 global functions:
+
+1. `utf8_str_split($str = '', $len = 0)` which acts the same as PHP's `str_split` function but works on UTF8 strings.
+2. `isJewishLeapYear($year)` which determines whether the given year is a leap year. Note that the year has to be numeric and greater than 5000.
+
 ## License
 The Hebdate package is open-source project licensed under the MIT license.
