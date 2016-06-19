@@ -1,6 +1,8 @@
 # HebrewDates
 
+![Version](https://img.shields.io/packagist/v/kfirba/hebdate.svg)
 ![Downloads](https://img.shields.io/packagist/dt/kfirba/hebdate.svg)
+![Status](https://img.shields.io/travis/kfirba/hebdate/master.svg)
 
 HebrewDates is a simple library that lets you easily convert gregorian dates to jewish dates, and vice versa, using several formants.
 
@@ -115,6 +117,7 @@ JewishDate::toGregorian('28 9 5776')->format(Format::DATETIME)->convert();
 // -> DateTime Object {}
 
 // These formats also apply when suing the GregorianDate::fromJewish() constructor:
+
 GregorianDate::fromJewish('28 9 5776')->format(Format::NUMERIC)->convert();
 // The default format -> 05/06/2016
 GregorianDate::fromJewish('28 9 5776')->format(Format::CARBON)->convert();
