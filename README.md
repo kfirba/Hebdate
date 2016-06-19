@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/packagist/v/kfirba/hebdate.svg)
 ![Downloads](https://img.shields.io/packagist/dt/kfirba/hebdate.svg)
-![Status](https://img.shields.io/travis/kfirba/hebdate/master.svg)
+![Status](https://api.travis-ci.org/kfirba/Hebdate.svg)
 
 HebrewDates is a simple library that lets you easily convert gregorian dates to jewish dates, and vice versa, using several formants.
 
