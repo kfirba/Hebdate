@@ -125,7 +125,9 @@ class HebrewStringParser extends Parser
     {
         $this->date[0] = self::dayLookup[$this->date[0]];
         $this->date[1] = self::monthLookup[$this->date[1]];
-        $this->date[2] = $this->numerology->sum($this->date[2], true);
+
+        $year = $this->numerology->sum($this->date[2], true);
+        $this->date[2] = $year < 5000 ? 5000 + $year : $year;
 
         return $this->date;
     }

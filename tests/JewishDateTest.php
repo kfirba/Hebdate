@@ -18,10 +18,12 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
         $numericDate = '28 9 5776';
         $englishMonthDate = '28 Iyar 5776';
         $hebrewFull = 'כח אייר התשעו';
+        $hebrewShort = 'כח אייר תשעו';
         $presentableHebrewDate = "כח׳ אייר התשע״ו";
 
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($numericDate)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewShort)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->convert());
     }
