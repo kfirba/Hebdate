@@ -4,7 +4,7 @@
 ![Downloads](https://img.shields.io/packagist/dt/kfirba/hebdate.svg)
 ![Status](https://api.travis-ci.org/kfirba/Hebdate.svg)
 
-HebrewDates is a simple library that lets you easily convert gregorian dates to jewish dates, and vice versa, using several formants.
+Hebdate is a simple library that lets you easily convert gregorian dates to jewish dates, and vice versa, using several formats.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Install the package via composer:
     
 ## Basic Usage
 
-Let's use the named constructor and convert some dates:
+Let's convert some dates:
 
 ```php
 // Note that we should pass the date as dd/mm/yyyy format:
