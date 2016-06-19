@@ -3,6 +3,7 @@
 use Carbon\Carbon;
 use Kfirba\JewishDate;
 use Kfirba\GregorianDate;
+use Kfirba\Formats\Format;
 
 class JewishDateTest extends PHPUnit_Framework_TestCase
 {
@@ -23,8 +24,8 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($numericDate)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthDate)->convert());
-        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewShort)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewFull)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewShort)->convert());
         $this->assertEquals('05/06/2016', JewishDate::toGregorian($presentableHebrewDate)->convert());
     }
 
@@ -32,11 +33,11 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
     public function it_accepts_multiple_formats()
     {
         $this->assertInstanceOf(Carbon::class,
-            JewishDate::toGregorian('28 9 5776')->format(JewishDate::CARBON)->convert()
+            JewishDate::toGregorian('28 9 5776')->format(Format::CARBON)->convert()
         );
 
         $this->assertInstanceOf(DateTime::class,
-            JewishDate::toGregorian('28 9 5776')->format(JewishDate::DATETIME)->convert()
+            JewishDate::toGregorian('28 9 5776')->format(Format::DATETIME)->convert()
         );
     }
 }

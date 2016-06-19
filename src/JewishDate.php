@@ -6,34 +6,8 @@ use Kfirba\Parsers\JewishDate\DefaultParser;
 use Kfirba\Parsers\JewishDate\HebrewStringParser;
 use Kfirba\Parsers\JewishDate\EnglishMonthParser;
 
-/**
- * Class JewishDate
- *
- * @package Kfirba
- */
 class JewishDate extends Date
 {
-    /**
-     * The default numeric format.
-     *
-     * @var string
-     */
-    const NUMERIC = 'Numeric';
-
-    /**
-     * Carbon object format.
-     *
-     * @var string
-     */
-    const CARBON = 'Carbon';
-
-    /**
-     * DateTime object format.
-     *
-     * @var string
-     */
-    const DATETIME = 'DateTime';
-
     /**
      * Named constructor.
      *

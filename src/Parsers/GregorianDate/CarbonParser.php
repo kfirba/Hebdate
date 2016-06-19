@@ -4,11 +4,6 @@ namespace Kfirba\Parsers\GregorianDate;
 
 use Kfirba\Parsers\Parser;
 
-/**
- * Class CarbonParser
- *
- * @package Kfirba\Parsers\GregorianDate
- */
 class CarbonParser extends Parser
 {
     /**

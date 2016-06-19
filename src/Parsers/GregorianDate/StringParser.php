@@ -5,11 +5,6 @@ namespace Kfirba\Parsers\GregorianDate;
 use Kfirba\Parsers\Parser;
 use InvalidArgumentException;
 
-/**
- * Class StringParser
- *
- * @package Kfirba\Parsers\GregorianDate
- */
 class StringParser extends Parser
 {
     /**

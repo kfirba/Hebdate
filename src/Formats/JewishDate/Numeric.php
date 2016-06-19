@@ -4,11 +4,6 @@ namespace Kfirba\Formats\JewishDate;
 
 use Kfirba\Formats\Format;
 
-/**
- * Class Numeric
- *
- * @package Kfirba\Parsers\JewishDate
- */
 class Numeric extends Format
 {
     /**

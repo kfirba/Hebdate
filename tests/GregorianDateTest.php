@@ -1,6 +1,7 @@
 <?php
 
 use Carbon\Carbon;
+use Kfirba\Formats\Format;
 use Kfirba\JewishDate;
 use Kfirba\GregorianDate;
 
@@ -27,9 +28,9 @@ class GregorianDateTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_format_the_date_according_to_given_format()
     {
-        $englishMonth = GregorianDate::toJewish('05/06/2016')->format(GregorianDate::ENGLISH_MONTH)->convert();
-        $hebrew = GregorianDate::toJewish(Carbon::createFromDate(2016, 6, 5))->format(GregorianDate::HEBREW_FULL)->convert();
-        $hebrewDate = GregorianDate::toJewish('05/06/2016')->format(GregorianDate::PRESENTABLE_HEBREW_DATE)->convert();
+        $englishMonth = GregorianDate::toJewish('05/06/2016')->format(Format::ENGLISH_MONTH)->convert();
+        $hebrew = GregorianDate::toJewish(Carbon::createFromDate(2016, 6, 5))->format(Format::HEBREW_FULL)->convert();
+        $hebrewDate = GregorianDate::toJewish('05/06/2016')->format(Format::PRESENTABLE_HEBREW_DATE)->convert();
 
 
         $this->assertEquals('28 Iyar 5776', $englishMonth);

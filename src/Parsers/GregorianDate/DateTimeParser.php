@@ -4,11 +4,6 @@ namespace Kfirba\Parsers\GregorianDate;
 
 use Kfirba\Parsers\Parser;
 
-/**
- * Class DateTimeParser
- *
- * @package Kfirba\Parsers\GregorianDate
- */
 class DateTimeParser extends Parser
 {
     /**

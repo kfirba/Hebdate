@@ -4,11 +4,6 @@ namespace Kfirba\Formats\JewishDate;
 
 use Kfirba\Formats\Format;
 
-/**
- * Class EnglishMonth
- *
- * @package Kfirba\Parsers\JewishDate
- */
 class EnglishMonth extends Format
 {
     /**

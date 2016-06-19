@@ -5,11 +5,6 @@ namespace Kfirba\Parsers\JewishDate;
 use Kfirba\Parsers\Parser;
 use Kfirba\Support\HebrewNumerology;
 
-/**
- * Class HebrewStringParser
- *
- * @package Kfirba\Parsers\JewishDate
- */
 class HebrewStringParser extends Parser
 {
     /**

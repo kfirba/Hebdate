@@ -8,41 +8,8 @@ use Kfirba\Parsers\GregorianDate\CarbonParser;
 use Kfirba\Parsers\GregorianDate\StringParser;
 use Kfirba\Parsers\GregorianDate\DateTimeParser;
 
-/**
- * Class GregorianDate
- *
- * @package Kfirba
- */
 class GregorianDate extends Date
 {
-    /**
-     * The default numeric format.
-     *
-     * @var string
-     */
-    const NUMERIC = 'Numeric';
-
-    /**
-     * Formats for english month date.
-     *
-     * @var string
-     */
-    const ENGLISH_MONTH = 'EnglishMonth';
-
-    /**
-     * Formats for full hebrew date.
-     *
-     * @var string
-     */
-    const HEBREW_FULL = 'HebrewFull';
-
-    /**
-     * Formats for presentation hebrew date.
-     *
-     * @var string
-     */
-    const PRESENTABLE_HEBREW_DATE = 'PresentableHebrewDate';
-
     /**
      * Named constructor.
      *

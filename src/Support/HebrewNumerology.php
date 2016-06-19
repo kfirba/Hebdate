@@ -2,11 +2,6 @@
 
 namespace Kfirba\Support;
 
-/**
- * Class HebrewNumerology
- *
- * @package Kfirba\Support
- */
 class HebrewNumerology
 {
     /**

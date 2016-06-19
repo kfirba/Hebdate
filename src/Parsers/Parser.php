@@ -2,11 +2,6 @@
 
 namespace Kfirba\Parsers;
 
-/**
- * Class Parser
- *
- * @package Kfirba\Parsers
- */
 abstract class Parser
 {
     /**

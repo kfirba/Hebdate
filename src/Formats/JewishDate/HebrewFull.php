@@ -5,11 +5,6 @@ namespace Kfirba\Formats\JewishDate;
 use Kfirba\Formats\Format;
 use Kfirba\Support\HebrewNumerology;
 
-/**
- * Class HebrewFull
- *
- * @package Kfirba\Parsers\JewishDate
- */
 class HebrewFull extends Format
 {
     /**

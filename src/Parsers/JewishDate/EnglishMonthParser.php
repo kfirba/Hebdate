@@ -4,11 +4,6 @@ namespace Kfirba\Parsers\JewishDate;
 
 use Kfirba\Parsers\Parser;
 
-/**
- * Class EnglishMonthParser
- *
- * @package Kfirba\Parsers\JewishDate
- */
 class EnglishMonthParser extends Parser
 {
     /**
