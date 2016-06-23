@@ -67,6 +67,15 @@ class JewishDate extends Date
      */
     public function getParser()
     {
+        // if the date is an array, we will implode it with
+        // a space to make it comply with the reset of
+        // the formats, so we can easily parse it.
+        if (is_array($this->date)) {
+            $this->date = implode(' ', $this->date);
+
+            return $this->getParser();
+        }
+
         if (preg_match('/[א-ת]/', $this->date)) {
             return new HebrewStringParser($this->date);
         }

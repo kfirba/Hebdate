@@ -4,6 +4,7 @@ namespace Kfirba;
 
 use DateTime;
 use Carbon\Carbon;
+use Kfirba\Parsers\GregorianDate\ArrayParser;
 use Kfirba\Parsers\GregorianDate\CarbonParser;
 use Kfirba\Parsers\GregorianDate\StringParser;
 use Kfirba\Parsers\GregorianDate\DateTimeParser;
@@ -69,6 +70,10 @@ class GregorianDate extends Date
      */
     protected function getParser()
     {
+        if (is_array($this->date)) {
+            return new ArrayParser($this->date);
+        }
+
         if ($this->date instanceof Carbon) {
             return new CarbonParser($this->date);
         }

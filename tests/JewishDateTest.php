@@ -30,6 +30,18 @@ class JewishDateTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_accepts_an_array_of_hebrew_date_in_various_formats_as_input()
+    {
+        $fullNumericArray = [28, 9, 5776];
+        $englishMonthArray = [28, 'Iyar', 5776];
+        $hebrewArray = ['כח', 'אייר', 'התשעו'];
+
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($fullNumericArray)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($englishMonthArray)->convert());
+        $this->assertEquals('05/06/2016', JewishDate::toGregorian($hebrewArray)->convert());
+    }
+
+    /** @test */
     public function it_accepts_multiple_formats()
     {
         $this->assertInstanceOf(Carbon::class,

@@ -1,9 +1,9 @@
 <?php
 
 use Carbon\Carbon;
-use Kfirba\Formats\Format;
 use Kfirba\JewishDate;
 use Kfirba\GregorianDate;
+use Kfirba\Formats\Format;
 
 class GregorianDateTest extends PHPUnit_Framework_TestCase
 {
@@ -16,10 +16,12 @@ class GregorianDateTest extends PHPUnit_Framework_TestCase
     /** @test */
     public function it_should_accept_carbon_and_datetime_objects_as_well_as_strings_as_parameter()
     {
+        $array = [5, 6, 2016];
         $string = '05/06/2016';
         $dateTime = new DateTime('2016-06-05');
         $carbon = Carbon::createFromDate(2016, 6, 5);
 
+        $this->assertEquals('28 9 5776', GregorianDate::toJewish($array)->convert());
         $this->assertEquals('28 9 5776', GregorianDate::toJewish($string)->convert());
         $this->assertEquals('28 9 5776', GregorianDate::toJewish($dateTime)->convert());
         $this->assertEquals('28 9 5776', GregorianDate::toJewish($carbon)->convert());
