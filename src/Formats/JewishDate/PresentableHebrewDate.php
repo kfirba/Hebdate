@@ -48,8 +48,7 @@ class PresentableHebrewDate extends Format
     protected function decorateYear($year)
     {
         $year = utf8_str_split($year);
-        $modifier = '״'.array_pop($year);
-        array_push($year, $modifier);
+        array_push($year, '״'.array_pop($year));
 
         return implode($year);
     }

@@ -19,7 +19,7 @@ class HebrewNumerologyTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(776, $this->numerology->sum('תשעו'));
     }
-    
+
     /** @test */
     public function it_should_respect_hebrew_years_with_preceding_H()
     {

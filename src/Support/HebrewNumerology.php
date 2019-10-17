@@ -10,33 +10,46 @@ class HebrewNumerology
      * @var array
      */
     const numerology = [
-        "א" => 1,
-        "ב" => 2,
-        "ג" => 3,
-        "ד" => 4,
-        "ה" => 5,
-        "ו" => 6,
-        "ז" => 7,
-        "ח" => 8,
-        "ט" => 9,
-        "י" => 10,
-        "כ" => 20,
-        "ל" => 30,
-        "מ" => 40,
-        "נ" => 50,
-        "ס" => 60,
-        "ע" => 70,
-        "פ" => 80,
-        "צ" => 90,
-        "ק" => 100,
-        "ר" => 200,
-        "ש" => 300,
-        "ת" => 400,
-        "ך" => 20,
-        "ם" => 40,
-        "ן" => 50,
-        "ף" => 80,
-        "ץ" => 90,
+        '' => 0,
+        'א' => 1,
+        'ב' => 2,
+        'ג' => 3,
+        'ד' => 4,
+        'ה' => 5,
+        'ו' => 6,
+        'ז' => 7,
+        'ח' => 8,
+        'ט' => 9,
+        'י' => 10,
+        'כ' => 20,
+        'ל' => 30,
+        'מ' => 40,
+        'נ' => 50,
+        'ס' => 60,
+        'ע' => 70,
+        'פ' => 80,
+        'צ' => 90,
+        'ק' => 100,
+        'ר' => 200,
+        'ש' => 300,
+        'ת' => 400,
+        'ך' => 20,
+        'ם' => 40,
+        'ן' => 50,
+        'ף' => 80,
+        'ץ' => 90,
+    ];
+
+    /**
+     * Year accumulator characters.
+     *
+     * @var array
+     */
+    const yearAccumulators = [
+        400 => 'ת',
+        300 => 'ש',
+        200 => 'ר',
+        100 => 'ק',
     ];
 
     /**
@@ -98,7 +111,7 @@ class HebrewNumerology
     protected function validateDigitsOnly($number)
     {
         if (! ctype_digit($number)) {
-            throw new \InvalidArgumentException("[$number] isn't a number.");
+            throw new \InvalidArgumentException("[{$number}] isn't a number.");
         }
     }
 
@@ -113,28 +126,24 @@ class HebrewNumerology
         // This is gonna work for the next 224 years
         // If you find yourself using this after
         // that time, oh well, you are fucked
-        $output = 'ה';
         array_shift($digits);
 
-        return $this->toNormalHebrewYear($digits, $output);
+        return 'ה'.$this->toNormalHebrewYear($digits);
     }
 
     /**
      * Calculates the hebrew year text representation.
      *
      * @param  array  $digits
-     * @param  string  $output
      * @return string
      */
-    protected function toNormalHebrewYear(array $digits, $output = '')
+    protected function toNormalHebrewYear(array $digits)
     {
-        $digits = array_reverse($digits);
-
-        $expanded = $this->expandDigits($digits);
-
-        $mapped = $this->mapToCharacters($expanded);
-
-        return $output.implode(array_reverse($mapped));
+        return implode(
+            array_reverse($this->mapToCharacters(
+                $this->expandDigits(array_reverse($digits))
+            ))
+        );
     }
 
     /**
@@ -179,31 +188,15 @@ class HebrewNumerology
             return array_flip(self::numerology)[$number];
         }
 
-        $possibilities = $this->getCharactersPossibilities();
-
         $characters = '';
 
-        foreach ($possibilities as $possibility => $character) {
-            if ($number >= $possibility) {
+        foreach (self::yearAccumulators as $accumulator => $character) {
+            if ($number >= $accumulator) {
                 $characters .= $character;
-                $number -= $possibility;
+                $number -= $accumulator;
             }
         }
 
         return $characters;
-    }
-
-    /**
-     * Get the characters possible for numbers greater than 400.
-     *
-     * @return array
-     */
-    protected function getCharactersPossibilities()
-    {
-        return array_flip(
-            array_reverse(array_filter(self::numerology, function ($item) {
-                return $item >= 100;
-            }))
-        );
     }
 }
