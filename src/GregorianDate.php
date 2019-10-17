@@ -36,18 +36,29 @@ class GregorianDate extends Date
     /**
      * Parse the Date object and return a result based on format.
      *
-     * @param string $delimiter
+     * @param  string  $delimiter
      * @return string
      */
-    public function convert($delimiter = " ")
+    public function convert($delimiter = ' ')
     {
-        $julianDate = $this->toJulianDate();
-
         $jewishDate = $this->applyFormat(
-            explode('/', jdtojewish($julianDate))
+            explode('/', jdtojewish($this->toJulianDate()))
         );
 
         return implode($delimiter, $jewishDate);
+    }
+
+    /**
+     * Apply a format.
+     *
+     * @param  array  $jewishDate
+     * @return mixed
+     */
+    protected function applyFormat(array $jewishDate)
+    {
+        $class = "Kfirba\\Formats\\JewishDate\\{$this->format}";
+
+        return (new $class($jewishDate))->format();
     }
 
     /**
@@ -66,7 +77,7 @@ class GregorianDate extends Date
     /**
      * Get the right parser for the date.
      *
-     * @return CarbonParser|DateTimeParser|StringParser
+     * @return ArrayParser|CarbonParser|DateTimeParser|StringParser
      */
     protected function getParser()
     {
@@ -83,18 +94,5 @@ class GregorianDate extends Date
         }
 
         return new StringParser($this->date);
-    }
-
-    /**
-     * Apply a format.
-     *
-     * @param array $jewishDate
-     * @return mixed
-     */
-    protected function applyFormat(array $jewishDate)
-    {
-        $class = "Kfirba\\Formats\\JewishDate\\{$this->format}";
-
-        return (new $class($jewishDate))->format();
     }
 }

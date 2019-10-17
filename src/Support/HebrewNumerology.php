@@ -36,14 +36,14 @@ class HebrewNumerology
         "ם" => 40,
         "ן" => 50,
         "ף" => 80,
-        "ץ" => 90
+        "ץ" => 90,
     ];
 
     /**
      * Get the sum of the word numerical representation.
      *
      * @param      $word
-     * @param bool $hebrewYear
+     * @param  bool  $hebrewYear
      * @return number
      */
     public function sum($word, $hebrewYear = false)
@@ -66,7 +66,7 @@ class HebrewNumerology
      */
     protected function validateHebrewCharactersOnly($word)
     {
-        if ( ! preg_match('/[א-ת]/', $word)) {
+        if (! preg_match('/[א-ת]/', $word)) {
             throw new \InvalidArgumentException('The string must be in hebrew with no spaces');
         }
     }
@@ -97,7 +97,7 @@ class HebrewNumerology
      */
     protected function validateDigitsOnly($number)
     {
-        if ( ! ctype_digit($number)) {
+        if (! ctype_digit($number)) {
             throw new \InvalidArgumentException("[$number] isn't a number.");
         }
     }
@@ -105,7 +105,7 @@ class HebrewNumerology
     /**
      * Adds the "ה" to the returned hebrew year text.
      *
-     * @param array $digits
+     * @param  array  $digits
      * @return string
      */
     protected function toFullHebrewYear(array $digits)
@@ -122,8 +122,8 @@ class HebrewNumerology
     /**
      * Calculates the hebrew year text representation.
      *
-     * @param array  $digits
-     * @param string $output
+     * @param  array  $digits
+     * @param  string  $output
      * @return string
      */
     protected function toNormalHebrewYear(array $digits, $output = '')
@@ -134,13 +134,13 @@ class HebrewNumerology
 
         $mapped = $this->mapToCharacters($expanded);
 
-        return $output . implode(array_reverse($mapped));
+        return $output.implode(array_reverse($mapped));
     }
 
     /**
      * Expand every digit to a full number based on its base 10 position.
      *
-     * @param array $digits
+     * @param  array  $digits
      * @return mixed
      */
     protected function expandDigits(array $digits)
@@ -157,7 +157,7 @@ class HebrewNumerology
     /**
      * Maps the numbers to corresponding hebrew characters.
      *
-     * @param array $expanded
+     * @param  array  $expanded
      * @return array
      */
     protected function mapToCharacters(array $expanded)

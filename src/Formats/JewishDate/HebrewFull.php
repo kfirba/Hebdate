@@ -43,7 +43,7 @@ class HebrewFull extends Format
         'כז',
         'כח',
         'כט',
-        'ל'
+        'ל',
     ];
 
     /**
@@ -65,7 +65,7 @@ class HebrewFull extends Format
         'סיון',
         'תמוז',
         'אב',
-        'אלול'
+        'אלול',
     ];
 
     /**
@@ -78,11 +78,12 @@ class HebrewFull extends Format
     /**
      * HebrewFull constructor.
      *
-     * @param array $date
+     * @param  array  $date
      */
     public function __construct(array $date)
     {
-        $this->date = $date;
+        parent::__construct($date);
+
         $this->numerology = new HebrewNumerology;
     }
 

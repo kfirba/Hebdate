@@ -2,8 +2,8 @@
 
 namespace Kfirba\Formats\GregorianDate;
 
-use Carbon\Carbon as CarbonDate;
 use Kfirba\Formats\Format;
+use Carbon\Carbon as CarbonDate;
 
 class Carbon extends Format
 {

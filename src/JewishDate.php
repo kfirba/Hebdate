@@ -33,7 +33,7 @@ class JewishDate extends Date
     /**
      * Parse the Date object and return a result based on format.
      *
-     * @param string $delimiter
+     * @param  string  $delimiter
      * @return string
      */
     public function convert($delimiter = '/')
@@ -90,7 +90,7 @@ class JewishDate extends Date
     /**
      * Apply a format.
      *
-     * @param array $gregorianDate
+     * @param  array  $gregorianDate
      * @return mixed
      */
     protected function applyFormat(array $gregorianDate)

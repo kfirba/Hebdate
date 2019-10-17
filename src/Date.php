@@ -30,14 +30,6 @@ abstract class Date
     }
 
     /**
-     * Parse the Date object and return a result based on format.
-     *
-     * @param string $delimiter
-     * @return string
-     */
-    abstract public function convert($delimiter = " ");
-
-    /**
      * Set the format.
      *
      * @param $format
@@ -51,19 +43,27 @@ abstract class Date
     }
 
     /**
-     * Get the julian date representation for the current date.
-     *
-     * @return int
-     */
-    abstract protected function toJulianDate();
-
-    /**
      * Convert the HebrewDate object into its string representation.
      *
      * @return string
      */
     public function __toString()
     {
-        return $this->parse();
+        return $this->convert();
     }
+
+    /**
+     * Parse the Date object and return a result based on format.
+     *
+     * @param  string  $delimiter
+     * @return string
+     */
+    abstract public function convert($delimiter = " ");
+
+    /**
+     * Get the julian date representation for the current date.
+     *
+     * @return int
+     */
+    abstract protected function toJulianDate();
 }

@@ -25,7 +25,7 @@ class EnglishMonth extends Format
         'Sivan',
         'Tammuz',
         'Av',
-        'Elul'
+        'Elul',
     ];
 
     /**

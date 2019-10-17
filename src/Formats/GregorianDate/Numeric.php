@@ -17,17 +17,17 @@ class Numeric extends Format
             ->order();
     }
 
-    protected function pad()
-    {
-        $this->date = array_map(function($segment) {
-            return strlen($segment) === 1 ? '0' . $segment : $segment;
-        }, $this->date);
-
-        return $this;
-    }
-
     protected function order()
     {
         return [$this->date[1], $this->date[0], $this->date[2]];
+    }
+
+    protected function pad()
+    {
+        $this->date = array_map(function ($segment) {
+            return strlen($segment) === 1 ? '0'.$segment : $segment;
+        }, $this->date);
+
+        return $this;
     }
 }

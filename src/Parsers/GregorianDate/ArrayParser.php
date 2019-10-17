@@ -1,4 +1,5 @@
 <?php
+
 namespace Kfirba\Parsers\GregorianDate;
 
 use Kfirba\Parsers\Parser;
