@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\JewishDate\DefaultParser;
 
-class DefaultParserTest extends PHPUnit_Framework_TestCase
+class DefaultParserTest extends TestCase
 {
     /** @test */
     public function it_explodes_the_date()

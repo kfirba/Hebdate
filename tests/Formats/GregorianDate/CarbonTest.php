@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\GregorianDate\Carbon;
 
-class CarbonTest extends PHPUnit_Framework_TestCase
+class CarbonTest extends TestCase
 {
     /** @test */
     public function it_returns_carbon_instance()

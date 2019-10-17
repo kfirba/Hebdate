@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\GregorianDate\DateTime;
 
-class DateTimeTest extends PHPUnit_Framework_TestCase
+class DateTimeTest extends TestCase
 {
     /** @test */
     public function it_returns_a_datetime_instance()

@@ -4,8 +4,9 @@ use Carbon\Carbon;
 use Kfirba\JewishDate;
 use Kfirba\GregorianDate;
 use Kfirba\Formats\Format;
+use PHPUnit\Framework\TestCase;
 
-class JewishDateTest extends PHPUnit_Framework_TestCase
+class JewishDateTest extends TestCase
 {
     /** @test */
     public function it_returns_GregorianDate_object_using_named_constructor()

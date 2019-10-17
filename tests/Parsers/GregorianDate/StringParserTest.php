@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\GregorianDate\StringParser;
 
-class StringParserTest extends PHPUnit_Framework_TestCase
+class StringParserTest extends TestCase
 {
     /** @test */
     public function it_should_accept_3_types_of_delimiters_and_return_appropriate_array_of_the_date()

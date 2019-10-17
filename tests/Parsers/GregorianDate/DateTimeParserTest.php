@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\GregorianDate\DateTimeParser;
 
-class DateTimeParserTest extends PHPUnit_Framework_TestCase
+class DateTimeParserTest extends TestCase
 {
     /** @test */
     public function it_should_parse_datetime_date_to_the_right_format()

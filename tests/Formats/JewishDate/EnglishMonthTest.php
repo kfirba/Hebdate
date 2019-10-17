@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\JewishDate\EnglishMonth;
 
-class EnglishMonthTest extends PHPUnit_Framework_TestCase
+class EnglishMonthTest extends TestCase
 {
     /** @test */
     public function it_should_return_an_appropriate_formatted_date()

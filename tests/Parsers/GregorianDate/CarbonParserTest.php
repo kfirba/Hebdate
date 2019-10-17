@@ -1,9 +1,10 @@
 <?php
 
 use Carbon\Carbon;
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\GregorianDate\CarbonParser;
 
-class CarbonParserTest extends PHPUnit_Framework_TestCase
+class CarbonParserTest extends TestCase
 {
     /** @test */
     public function it_should_parse_carbon_date_to_the_right_format()

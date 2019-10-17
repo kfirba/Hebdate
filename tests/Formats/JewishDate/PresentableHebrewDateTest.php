@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\JewishDate\PresentableHebrewDate;
 
-class PresentableHebrewDateTest extends PHPUnit_Framework_TestCase
+class PresentableHebrewDateTest extends TestCase
 {
     /** @test */
     public function it_should_return_formatted_hebrew_date()

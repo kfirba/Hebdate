@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\JewishDate\EnglishMonthParser;
 
-class EnglishMonthParserTest extends PHPUnit_Framework_TestCase
+class EnglishMonthParserTest extends TestCase
 {
     /** @test */
     public function it_parses_the_date_to_numeric_representation_substituting_the_english_month()

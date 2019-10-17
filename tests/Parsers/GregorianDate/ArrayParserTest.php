@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\GregorianDate\ArrayParser;
 
-class ArrayParserTest extends PHPUnit_Framework_TestCase
+class ArrayParserTest extends TestCase
 {
     /** @test */
     public function it_should_parse_an_array_to_the_right_format()

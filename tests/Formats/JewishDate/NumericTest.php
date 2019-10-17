@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\JewishDate\Numeric;
 
-class NumericTest extends PHPUnit_Framework_TestCase
+class NumericTest extends TestCase
 {
     /** @test */
     public function it_should_return_the_date_array_in_the_right_order()

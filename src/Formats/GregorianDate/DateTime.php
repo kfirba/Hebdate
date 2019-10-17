@@ -12,6 +12,7 @@ class DateTime extends Format
      * Handle the parse request.
      *
      * @return mixed
+     * @throws \Exception
      */
     public function format()
     {

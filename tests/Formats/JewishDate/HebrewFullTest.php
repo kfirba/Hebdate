@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Formats\JewishDate\HebrewFull;
 
-class HebrewFullTest extends PHPUnit_Framework_TestCase
+class HebrewFullTest extends TestCase
 {
     /** @test */
     public function it_should_return_hebrew_representation_of_the_string()

@@ -83,7 +83,8 @@ class HebrewStringParser extends Parser
      */
     public function __construct($date)
     {
-        $this->date = $date;
+        parent::__construct($date);
+
         $this->numerology = new HebrewNumerology;
     }
 
@@ -100,7 +101,7 @@ class HebrewStringParser extends Parser
     /**
      * Swap the word representation with numeric's.
      *
-     * @return $this
+     * @return \Carbon\Carbon|\DateTime|string
      */
     protected function swap()
     {

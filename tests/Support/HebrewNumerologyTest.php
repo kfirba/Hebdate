@@ -1,15 +1,16 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Support\HebrewNumerology;
 
-class HebrewNumerologyTest extends PHPUnit_Framework_TestCase
+class HebrewNumerologyTest extends TestCase
 {
     /**
      * @var HebrewNumerology
      */
     protected $numerology;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->numerology = new HebrewNumerology;
     }
@@ -19,19 +20,18 @@ class HebrewNumerologyTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(776, $this->numerology->sum('תשעו'));
     }
-    
+
     /** @test */
     public function it_should_respect_hebrew_years_with_preceding_H()
     {
         $this->assertEquals(5776, $this->numerology->sum('התשעו', true));
     }
 
-    /**
-     * @test
-     * @expectedException InvalidArgumentException
-     */
+    /** @test */
     public function it_should_throw_an_exception_given_a_bad_argument()
     {
+        $this->expectException(InvalidArgumentException::class);
+
         $this->numerology->sum('Englis H');
     }
 
@@ -42,12 +42,11 @@ class HebrewNumerologyTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('תשעו', $this->numerology->toHebrewYear(776));
     }
 
-    /**
-     * @test
-     * @expectedException InvalidArgumentException
-     */
+    /** @test */
     public function it_should_throw_an_exception_if_the_input_isnt_a_number()
     {
+        $this->expectException(InvalidArgumentException::class);
+
         $this->numerology->toHebrewYear('התשעו');
     }
 }

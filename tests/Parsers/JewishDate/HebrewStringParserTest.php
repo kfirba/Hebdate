@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use Kfirba\Parsers\JewishDate\HebrewStringParser;
 
-class HebrewStringParserTest extends PHPUnit_Framework_TestCase
+class HebrewStringParserTest extends TestCase
 {
     /** @test */
     public function it_parses_the_hebrew_date_to_numeric_representation()
